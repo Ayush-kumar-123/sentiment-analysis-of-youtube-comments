@@ -3,8 +3,11 @@ import openpyxl
 values=[]
 workbook=openpyxl.load_workbook("C:\\Users\LENOVO\Downloads\excel2.xlsx")//location of  excel file
 sh1=workbook['Sheet1']
+//taking the ongoing sheet
 row=sh1.max_row
+//selecting max rows
 column=sh1.max_column
+//selecting max column
 
 
 for i in range(1,row+1):
@@ -14,6 +17,7 @@ for i in range(1,row+1):
     else:
         values.append(sh1.cell(i + 1, 3).value)
 print(values)
+
 ayush=[]
 from textblob import TextBlob
 for i in range(len(values)):
